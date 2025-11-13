@@ -13,6 +13,16 @@ public static void main(String[] args) {
             int answer = input.nextInt(); 
             input.nextLine();
             success = (answer == number);
+
+            if (answer < number) {
+            System.out.println("Too low! Try again.");
+            } else if (answer > number) {
+            System.out.println("Too high! Try again.");
+            } else {
+            System.out.println("Correct! The number was " + number + ".");
+            success = true;
+            }
+            
         } while (!success);
         System.out.print("Do you want to repeat the game? (Y/N)");
         menu = input.next().charAt(0);
